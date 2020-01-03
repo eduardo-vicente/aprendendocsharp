@@ -1,0 +1,5 @@
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\9-Escopo\bin\Debug\9-Escopo.exe.config
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\9-Escopo\bin\Debug\9-Escopo.exe
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\9-Escopo\bin\Debug\9-Escopo.pdb
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\9-Escopo\obj\Debug\9-Escopo.exe
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\9-Escopo\obj\Debug\9-Escopo.pdb

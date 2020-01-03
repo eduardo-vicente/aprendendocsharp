@@ -1,0 +1,6 @@
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFatorial\bin\Debug\TesteFatorial.exe.config
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFatorial\bin\Debug\TesteFatorial.exe
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFatorial\bin\Debug\TesteFatorial.pdb
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFatorial\obj\Debug\TesteFatorial.csprojAssemblyReference.cache
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFatorial\obj\Debug\TesteFatorial.exe
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFatorial\obj\Debug\TesteFatorial.pdb

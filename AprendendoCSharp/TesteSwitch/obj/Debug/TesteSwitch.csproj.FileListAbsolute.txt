@@ -1,0 +1,6 @@
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteSwitch\bin\Debug\TesteSwitch.exe.config
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteSwitch\bin\Debug\TesteSwitch.exe
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteSwitch\bin\Debug\TesteSwitch.pdb
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteSwitch\obj\Debug\TesteSwitch.csprojAssemblyReference.cache
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteSwitch\obj\Debug\TesteSwitch.exe
+C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteSwitch\obj\Debug\TesteSwitch.pdb
