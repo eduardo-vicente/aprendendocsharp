@@ -11,7 +11,7 @@ namespace ByteBankRH.Sistemas
     {
         public Autenticavel(double salario, string cpf) : base(3000, cpf)
         {
-            Console.WriteLine("Criando FUNCIONARIO");
+            
         }
 
         public string Senha { get; set; }
