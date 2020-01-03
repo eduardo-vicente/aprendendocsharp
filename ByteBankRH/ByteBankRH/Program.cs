@@ -30,8 +30,14 @@ namespace ByteBankRH
             camila.Nome = "Camila";
             camila.Senha = "444";
 
+            ParceiroComercial parceiroComercial = new ParceiroComercial();
+            parceiroComercial.Senha = "123456";
+
+
+
             sistemaInterno.Logar(roberta, "123");
             sistemaInterno.Logar(camila, "444");
+            sistemaInterno.Logar(parceiroComercial, "123456");
         }
 
         public static void CalcularBonificacao()

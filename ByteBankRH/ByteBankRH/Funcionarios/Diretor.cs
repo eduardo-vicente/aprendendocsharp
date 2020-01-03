@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ByteBankRH.Funcionarios
 {
-    public class Diretor : Autenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
-
+        
         public Diretor(string cpf) : base(5000,cpf)   
         {
             Console.WriteLine("Criando DIRETOR");

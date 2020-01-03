@@ -7,19 +7,23 @@ using System.Threading.Tasks;
 
 namespace ByteBankRH.Sistemas
 {
-    public class SistemaInterno 
+    public class SistemaInterno
     {
-        public bool Logar(Autenticavel funcionario, string senha)
+        public bool Logar(IAutenticavel funcionario, string senha)
         {
             bool usuarioAutenticado = funcionario.Autenticar(senha);
 
             if (usuarioAutenticado)
             {
-                Console.WriteLine("Bem-vindo ao sistema");
+                Console.WriteLine("Bem-vindo ao sistema!");
                 return true;
             }
-            Console.WriteLine("Senha incorreta!");
-            return false;
+            else
+            {
+                Console.WriteLine("Senha incorreta!");
+                return false;
+            }
+
         }
     }
 }
