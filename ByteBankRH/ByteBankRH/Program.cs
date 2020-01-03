@@ -1,4 +1,5 @@
 ﻿using ByteBankRH.Funcionarios;
+using ByteBankRH.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,27 @@ namespace ByteBankRH
     {
         static void Main(string[] args)
         {
-            CalcularBonificacao();
+            // CalcularBonificacao();
+            UsarSistema();
             Console.ReadLine();
         }
 
+
+        public static void UsarSistema()
+        {
+            SistemaInterno sistemaInterno = new SistemaInterno();
+
+            Diretor roberta = new Diretor("159.753.398-04");
+            roberta.Nome = "Roberta";
+            roberta.Senha = "123";
+
+            GerenteConta camila = new GerenteConta("326.985.628-89");
+            camila.Nome = "Camila";
+            camila.Senha = "444";
+
+            sistemaInterno.Logar(roberta, "123");
+            sistemaInterno.Logar(camila, "444");
+        }
 
         public static void CalcularBonificacao()
         {
