@@ -12,37 +12,26 @@ namespace _07_ByteBank
         {
             static void Main(string[] args)
             {
-
                 try
                 {
-                    ContaCorrente conta = new ContaCorrente(456, 5013);
-                    conta.Depositar(50);
-                    Console.WriteLine(conta.Saldo);
-                    conta.Sacar(500);
-                    Console.WriteLine(conta.Saldo);
+                    ContaCorrente conta1 = new ContaCorrente(132, 1234);
+                    ContaCorrente conta2 = new ContaCorrente(9913, 666);
+                    conta1.Transferir(10000, conta2);
+
                 }
-                catch (ArgumentException ex)
+                catch (OperacaoFinanceiraException e)
                 {
-                    if (ex.ParamName == "numero")
-                    {
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine(e.StackTrace);
 
-                    }
-                    Console.WriteLine("Argumento com problema: " + ex.ParamName);
-                    Console.WriteLine("Ocorreu uma excecao de argumento do tipo ArgumentException");
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+
+                    Console.WriteLine(e.InnerException.Message);
+                    Console.WriteLine(e.InnerException.StackTrace);
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-                // Metodo();
-
                 Console.WriteLine("Execucao finalizada. Tecle enter para sair");
                 Console.ReadLine();
             }
-            //Teste com a cadeia de chamada:
-            //Metodo -> TestaDivisao -> Dividir
             private static void Metodo()
             {
                 TestaDivisao(0);
@@ -66,8 +55,6 @@ namespace _07_ByteBank
                     Console.WriteLine("Erro no calculo: " + ex.Message);
                     throw;
                 }
-
-
             }
         }
     }

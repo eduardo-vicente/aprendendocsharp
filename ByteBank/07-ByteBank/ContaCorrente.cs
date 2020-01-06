@@ -11,6 +11,9 @@ namespace _07_ByteBank
 
         public Cliente Titular { get; set; }
 
+        public int ContadorSaquesNaoPerimitidos { get; private set; }
+        public int ContadorTransferenciasNaoPermitidas { get; private set; }
+
         public int Numero { get; }
         public int Agencia { get; }
 
@@ -39,46 +42,57 @@ namespace _07_ByteBank
             {
                 throw new ArgumentException("Erro de argumento. A agencia tem que ser maior que 0.", nameof(agencia));
             }
-            if(numero <= 0)
+            if (numero <= 0)
             {
                 throw new ArgumentException("Erro de argumento. O numero tem que ser maior que 0.", nameof(numero));
             }
 
             Agencia = agencia;
             Numero = numero;
-            TaxaOperacao = 30 / TotalContasCriadas;
+
             TotalContasCriadas++;
+            TaxaOperacao = 30 / TotalContasCriadas;
         }
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
-
-            if (this._saldo < valor)
+            if (valor < 0)
             {
-                return false;
+                throw new ArgumentException("Erro de argumento. Valor de saque não pode ser negativo.", nameof(valor));
+            }
+            if (_saldo < valor)
+            {
+                ContadorSaquesNaoPerimitidos++;
+                throw new SaldoInsuficienteException(Saldo, valor);
+
             }
 
-            this._saldo -= valor;
-            return true;
-
+            _saldo -= valor;
         }
 
         public void Depositar(double valor)
         {
-            this._saldo += valor;
+            _saldo += valor;
         }
 
-        public bool Transferir(double valor, ContaCorrente contaDestino)
+        public void Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (this._saldo < valor)
+
+            if (valor < 0)
             {
-                return false;
+                throw new ArgumentException("Erro de argumento. Valor de transferencia não pode ser negativo.", nameof(valor));
+            }
+            try
+            {
+                Sacar(valor);
+            }
+            catch (SaldoInsuficienteException ex)
+            {
+                ContadorTransferenciasNaoPermitidas++;
+                throw new OperacaoFinanceiraException("Operacao nao realizada", ex);
             }
 
-            this._saldo -= valor;
             contaDestino.Depositar(valor);
-            return true;
-
 
         }
 
