@@ -4,9 +4,9 @@ namespace _07_ByteBank
 {
     class ContaCorrente
     {
-
-        public Cliente Titular { get; set; }
         public static int TotalContasCriadas { get; private set; }
+        public Cliente Titular { get; set; }
+        public int Numero { get; set; }
         private int _agencia;
         public int Agencia
         {
@@ -26,7 +26,7 @@ namespace _07_ByteBank
 
             }
         }
-        public int Numero { get; set; }
+        
 
         private double _saldo = 100;
 
