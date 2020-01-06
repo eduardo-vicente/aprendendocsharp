@@ -16,11 +16,17 @@ namespace _07_ByteBank
                 {
                     Metodo();
                 }
-                catch (NullReferenceException erro)
+                catch (DivideByZeroException erro)
                 {
+                    Console.WriteLine("Nao eh possivel divisao por 0");
+                }
+                catch (Exception erro)
+                {
+                    Console.WriteLine(erro.Message);
                     Console.WriteLine(erro.StackTrace);
                     Console.WriteLine("Aconteceu um erro!");
                 }
+               
                 Console.ReadLine();
             }
             //Teste com a cadeia de chamada:
@@ -32,28 +38,22 @@ namespace _07_ByteBank
 
             private static void TestaDivisao(int divisor)
             {
-                //o bloco do try pode lancar um erro
-                //se tem bloco try/catch, a excecao nao eh propagada para os outros metodos
-                try
-                {
-                    int resultado = Dividir(10, divisor);
-                    Console.WriteLine("Resultado da divisão de 10 por " + divisor + " é " + resultado);
-                }
-
-                catch(DivideByZeroException erro)
-                {
-                    Console.WriteLine(erro.Message);
-                    Console.WriteLine(erro.StackTrace);
-                    Console.WriteLine("Não é possivel fazer uma divisão por 0!");
-                }
-                
+                int resultado = Dividir(10, divisor);
+                Console.WriteLine("O resultado da divisao de 10 por " + divisor + " é " + resultado);
             }
 
             private static int Dividir(int numero, int divisor)
             {
-                ContaCorrente contaCorrente = null;
-                Console.WriteLine(contaCorrente.Saldo);
-                return numero / divisor;
+                try
+                {//se acontece uma excecao, o bloco try nao eh executado e o bloco catch nao retorna nada, precisamos fazer algo para que o catch retorne algo -> throw (controle de fluxo)
+                    return numero / divisor;
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Exceção com numero igual " + numero + " e divisor igual " + divisor);
+                    throw;
+                }
+                
             }
         }
     }
