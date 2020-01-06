@@ -12,21 +12,33 @@ namespace _07_ByteBank
         {
             static void Main(string[] args)
             {
+
                 try
                 {
-                    Metodo();
+                    ContaCorrente conta = new ContaCorrente(456, 5013);
+                    conta.Depositar(50);
+                    Console.WriteLine(conta.Saldo);
+                    conta.Sacar(500);
+                    Console.WriteLine(conta.Saldo);
                 }
-                catch (DivideByZeroException erro)
+                catch (ArgumentException ex)
                 {
-                    Console.WriteLine("Nao eh possivel divisao por 0");
+                    if (ex.ParamName == "numero")
+                    {
+
+                    }
+                    Console.WriteLine("Argumento com problema: " + ex.ParamName);
+                    Console.WriteLine("Ocorreu uma excecao de argumento do tipo ArgumentException");
+                    Console.WriteLine(ex.Message);
                 }
-                catch (Exception erro)
+                catch (Exception ex)
                 {
-                    Console.WriteLine(erro.Message);
-                    Console.WriteLine(erro.StackTrace);
-                    Console.WriteLine("Aconteceu um erro!");
+                    Console.WriteLine(ex.Message);
                 }
-               
+
+                // Metodo();
+
+                Console.WriteLine("Execucao finalizada. Tecle enter para sair");
                 Console.ReadLine();
             }
             //Teste com a cadeia de chamada:
@@ -39,21 +51,23 @@ namespace _07_ByteBank
             private static void TestaDivisao(int divisor)
             {
                 int resultado = Dividir(10, divisor);
-                Console.WriteLine("O resultado da divisao de 10 por " + divisor + " é " + resultado);
+                Console.WriteLine("Resultado da divisao de 10 por " + divisor + " é " + resultado);
             }
 
             private static int Dividir(int numero, int divisor)
             {
+                //se acontece uma excecao, o bloco try nao eh executado e o bloco catch nao retorna nada, precisamos fazer algo para que o catch retorne algo -> throw (controle de fluxo)
                 try
-                {//se acontece uma excecao, o bloco try nao eh executado e o bloco catch nao retorna nada, precisamos fazer algo para que o catch retorne algo -> throw (controle de fluxo)
+                {
                     return numero / divisor;
                 }
-                catch (DivideByZeroException)
+                catch (DivideByZeroException ex)
                 {
-                    Console.WriteLine("Exceção com numero igual " + numero + " e divisor igual " + divisor);
+                    Console.WriteLine("Erro no calculo: " + ex.Message);
                     throw;
                 }
-                
+
+
             }
         }
     }
