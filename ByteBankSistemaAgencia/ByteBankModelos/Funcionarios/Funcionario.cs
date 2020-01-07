@@ -27,7 +27,7 @@ namespace ByteBankRH.Funcionarios
 
 
 
-        public abstract double GetBonificacao();
+        internal protected abstract double GetBonificacao();
 
        
     }

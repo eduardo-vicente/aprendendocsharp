@@ -18,7 +18,7 @@ namespace ByteBankRH.Funcionarios
             Salario *= 1.10;
         }
 
-        public override double GetBonificacao()
+        internal protected override double GetBonificacao()
         {
             return Salario * 0.20;
         }

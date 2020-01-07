@@ -1,4 +1,5 @@
-﻿using ByteBankRH.Sistemas;
+﻿using ByteBankModelos;
+using ByteBankRH.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,14 @@ namespace ByteBankRH
 {
     public class ParceiroComercial : IAutenticavel
     {
+
+        private AutenticacaoHelper _autenticacaoHelper = new AutenticacaoHelper();
         public string Senha { get; set; }
+
         public bool Autenticar(string senha)
         {
-            return Senha == senha;
+
+            return _autenticacaoHelper.CompararSenhas(Senha, senha);
         }
     }
-
 }

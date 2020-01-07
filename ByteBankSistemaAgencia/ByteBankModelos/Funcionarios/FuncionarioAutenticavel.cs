@@ -1,4 +1,5 @@
-﻿using ByteBankRH.Sistemas;
+﻿using ByteBankModelos;
+using ByteBankRH.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,11 @@ namespace ByteBankRH.Funcionarios
 {
     public abstract class FuncionarioAutenticavel : Funcionario, IAutenticavel
     {
+
         public string Senha { get; set; }
+
+        private AutenticacaoHelper _autenticacaoHelper = new AutenticacaoHelper();
+
         public FuncionarioAutenticavel(double salario, string cpf) : base(salario, cpf)
         {
             
@@ -17,7 +22,7 @@ namespace ByteBankRH.Funcionarios
 
         public bool Autenticar(string senha)
         {
-            return Senha == senha;
+            return _autenticacaoHelper.CompararSenhas(Senha, senha);
         }
     }
 }
