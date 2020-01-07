@@ -2,7 +2,7 @@
 
 namespace _07_ByteBank
 {
-    class ContaCorrente
+    public class ContaCorrente
     {
 
         public static double TaxaOperacao { get; private set; }
