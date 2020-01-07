@@ -1,5 +1,0 @@
-C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFor\bin\Debug\TesteFor.exe.config
-C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFor\bin\Debug\TesteFor.exe
-C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFor\bin\Debug\TesteFor.pdb
-C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFor\obj\Debug\TesteFor.exe
-C:\Users\eduardo.vicente\source\repos\AprendendoCSharp\TesteFor\obj\Debug\TesteFor.pdb
