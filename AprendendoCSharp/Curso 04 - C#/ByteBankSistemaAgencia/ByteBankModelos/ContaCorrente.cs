@@ -41,7 +41,11 @@ namespace _07_ByteBank
                 _saldo = value;
             }
         }
-
+        /// <summary>
+        /// Cria uma instancia de Conta Corrente com os argumentos utilizados.
+        /// </summary>
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e deve possuir um valor maior que zero.</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e deve possuir um valor maior que zero.</param>
         public ContaCorrente(int agencia, int numero)
         {
             if (agencia <= 0)

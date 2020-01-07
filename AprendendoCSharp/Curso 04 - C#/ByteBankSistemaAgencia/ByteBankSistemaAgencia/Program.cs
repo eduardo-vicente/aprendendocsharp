@@ -14,6 +14,8 @@ namespace ByteBankSistemaAgencia
         {
             ContaCorrente conta = new ContaCorrente(1323, 5441);
 
+            new ContaCorrente(1232, 444);
+
             Console.WriteLine(conta.Numero);
 
             Designer desi = new Designer("123.123.444-24");
