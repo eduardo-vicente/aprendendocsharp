@@ -1,5 +1,0 @@
-C:\Users\eduardo.vicente\source\repos\ByteBank\02-ByteBank\bin\Debug\02-ByteBank.exe.config
-C:\Users\eduardo.vicente\source\repos\ByteBank\02-ByteBank\bin\Debug\02-ByteBank.exe
-C:\Users\eduardo.vicente\source\repos\ByteBank\02-ByteBank\bin\Debug\02-ByteBank.pdb
-C:\Users\eduardo.vicente\source\repos\ByteBank\02-ByteBank\obj\Debug\02-ByteBank.exe
-C:\Users\eduardo.vicente\source\repos\ByteBank\02-ByteBank\obj\Debug\02-ByteBank.pdb
