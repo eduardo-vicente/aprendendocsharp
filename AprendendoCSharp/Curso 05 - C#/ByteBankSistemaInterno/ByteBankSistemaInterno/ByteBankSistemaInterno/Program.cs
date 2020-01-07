@@ -1,4 +1,5 @@
-﻿using _07_ByteBank;
+﻿
+using _07_ByteBank;
 using ByteBankRH.Funcionarios;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,14 @@ namespace ByteBankSistemaInterno
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(12313,1113);
+
+            ContaCorrente conta = new ContaCorrente(12313, 1113);
             Designer desi = new Designer("111.111.113-33");
 
+            Console.WriteLine(conta.Agencia);
+            Console.WriteLine(desi.CPF);
+
+            Console.ReadLine();
         }
     }
 }
