@@ -2,6 +2,9 @@
 
 namespace _07_ByteBank
 {
+    /// <summary>
+    /// Esta classe define uma Conta Corrente do banco ByteBank
+    /// </summary>
     class ContaCorrente
     {
 
