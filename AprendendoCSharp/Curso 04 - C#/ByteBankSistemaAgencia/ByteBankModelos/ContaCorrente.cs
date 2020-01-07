@@ -10,8 +10,12 @@ namespace _07_ByteBank
 
     public class ContaCorrente
     {
-
+        /// <summary>
+        /// Calcula a taxa de operacao do banco.
+        /// </summary>
         public static double TaxaOperacao { get; private set; }
+
+
 
         public static int TotalContasCriadas { get; private set; }
 
@@ -41,6 +45,8 @@ namespace _07_ByteBank
                 _saldo = value;
             }
         }
+
+
         /// <summary>
         /// Cria uma instancia de Conta Corrente com os argumentos utilizados.
         /// </summary>
@@ -64,6 +70,15 @@ namespace _07_ByteBank
             TaxaOperacao = 30 / TotalContasCriadas;
         }
 
+
+        /// <summary>
+        /// Realiza o saque e atualiza o valor das propriedades <see cref="Saldo"/>
+        /// </summary>
+        /// <exception cref="ArgumentException">Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/></exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o valor de <paramref name="valor"/> é menor que o <see cref="Saldo"/></exception>
+        /// <param name="valor"> Representa o valor a ser sacado, deve ser maior que 0 e menor que o <see cref="Saldo"/></param>
+        /// 
+
         public void Sacar(double valor)
         {
             if (valor < 0)
@@ -80,6 +95,11 @@ namespace _07_ByteBank
             _saldo -= valor;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="valor"></param>
         public void Depositar(double valor)
         {
             _saldo += valor;

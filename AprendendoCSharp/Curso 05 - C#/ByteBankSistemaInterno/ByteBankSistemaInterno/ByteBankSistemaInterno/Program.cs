@@ -14,11 +14,13 @@ namespace ByteBankSistemaInterno
         static void Main(string[] args)
         {
 
-            ContaCorrente conta = new ContaCorrente(123123, 1111);
+            ContaCorrente conta = new ContaCorrente(133,833);
             Designer desi = new Designer("111.111.113-33");
 
             Console.WriteLine(conta.Agencia);
             Console.WriteLine(desi.CPF);
+
+            conta.Sacar(300);
 
             Console.ReadLine();
         }

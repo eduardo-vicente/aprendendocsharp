@@ -16,6 +16,8 @@ namespace ByteBankSistemaAgencia
 
             new ContaCorrente(1232, 444);
 
+            string nome = "Guilherme";
+
             Console.WriteLine(conta.Numero);
 
             Designer desi = new Designer("123.123.444-24");
