@@ -14,7 +14,7 @@ namespace ByteBankSistemaInterno
         static void Main(string[] args)
         {
 
-            ContaCorrente conta = new ContaCorrente(133,833);
+            ContaCorrente conta = new ContaCorrente(333,1930);
             Designer desi = new Designer("111.111.113-33");
 
             Console.WriteLine(conta.Agencia);
