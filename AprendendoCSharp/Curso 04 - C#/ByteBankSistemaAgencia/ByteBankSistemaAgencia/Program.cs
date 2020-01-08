@@ -13,15 +13,19 @@ namespace ByteBankSistemaAgencia
     {
         static void Main(string[] args)
         {
-            string url = "pagina?argumentos";
+            string url = "pagina?moedaOrigem=real&moedaDestino=dolar";
 
-            Console.WriteLine(url);
 
-            url = url.Substring(01);
+            string textoVazio = "";
+            string textoNulo = null;
+            string textoQualquer = "asfasfdasdfsa";
 
-            Console.WriteLine(url);
+            Console.WriteLine(string.IsNullOrEmpty(textoVazio));
+            Console.WriteLine(string.IsNullOrEmpty(textoNulo));
+            Console.WriteLine(string.IsNullOrEmpty(textoQualquer));
 
             Console.ReadLine();
+
         }
 
 
