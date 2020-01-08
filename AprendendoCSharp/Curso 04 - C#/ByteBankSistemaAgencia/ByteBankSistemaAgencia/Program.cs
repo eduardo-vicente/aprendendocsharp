@@ -19,10 +19,11 @@ namespace ByteBankSistemaAgencia
             string textoVazio = "";
             string textoNulo = null;
             string textoQualquer = "asfasfdasdfsa";
+            
 
-            Console.WriteLine(string.IsNullOrEmpty(textoVazio));
-            Console.WriteLine(string.IsNullOrEmpty(textoNulo));
-            Console.WriteLine(string.IsNullOrEmpty(textoQualquer));
+            Console.WriteLine(String.IsNullOrEmpty(textoVazio));
+            Console.WriteLine(String.IsNullOrEmpty(textoNulo));
+            Console.WriteLine(String.IsNullOrEmpty(textoQualquer));
 
             Console.ReadLine();
 
