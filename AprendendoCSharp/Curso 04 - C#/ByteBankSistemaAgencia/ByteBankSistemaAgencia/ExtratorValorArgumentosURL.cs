@@ -26,7 +26,10 @@ namespace ByteBankSistemaAgencia
 
         }
 
-
-
+        // moedaOrigem=real&moedaDestino=dolar
+        public string GetValor(string nomeParametro)
+        {
+                return " ";
+        }
     }
 }
